@@ -8,19 +8,19 @@
 			<table class="table table-condensed">
 				<thead>
 					<tr>
-						<th>Last Modified</th>
-						<th>Size</th>
 						<th>Key</th>
+						<th>Size</th>
+						<th>Last Modified</th>
 					</tr>
 				</thead>
 				<tbody>
 					{{range .Contents}} 
 					<tr>
-						<td>{{.LastModified}}</td>
-						<td>{{.Size}}</td>
 						<td>
 							<a href="{{.Key}}">{{.Key}}</a>
 						</td>
+						<td>{{.Size}}</td>
+						<td>{{.LastModified}}</td>
 					</tr>
 					{{end}}
 				</tbody>
