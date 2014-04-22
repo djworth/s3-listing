@@ -33,6 +33,10 @@ func executeListingPage(listing *s3.ListResp, list *template.Template, filename 
 func main() {
 
 	flag.Parse()
+	if bucket == "" {
+		flag.Usage()
+		return
+	}
 
 	auth, err := aws.EnvAuth()
 	if err != nil {
